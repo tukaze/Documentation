@@ -1,0 +1,13 @@
+{
+  "name": "docussaurus-root",
+  "private": true,
+  "scripts": {
+    "install:docs": "npm install --prefix docs",
+    "build": "npm run build --prefix docs",
+    "start": "npm run start --prefix docs",
+    "typecheck": "npm run typecheck --prefix docs"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
