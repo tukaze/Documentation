@@ -233,13 +233,37 @@ code {
   }
 
   .navbar-sidebar__items {
+    height: calc(100vh - var(--ifm-navbar-height));
     padding-bottom: 1rem;
+    overflow-y: auto;
+    background: inherit;
+  }
+
+  .navbar-sidebar__items--custom {
+    display: block;
+    transform: none !important;
+  }
+
+  .navbar-sidebar__item {
+    width: 100%;
+    min-height: 100%;
+    padding: 0.75rem;
+    background: inherit;
+  }
+
+  .navbar-sidebar__menu-list {
+    margin: 0;
+    padding: 0;
   }
 
   .navbar-sidebar .menu__link,
   .navbar-sidebar .navbar__link {
     display: block;
     margin: 0.25rem 0;
+  }
+
+  .navbar-sidebar .menu__list-item {
+    list-style: none;
   }
 
   .theme-doc-markdown {
