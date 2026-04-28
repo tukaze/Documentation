@@ -256,6 +256,17 @@ code {
     padding: 0;
   }
 
+  .navbar-sidebar__menu-item {
+    list-style: none;
+  }
+
+  .navbar-sidebar__menu-link {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 14px;
+    font-weight: 700;
+  }
+
   .navbar-sidebar .menu__link,
   .navbar-sidebar .navbar__link {
     display: block;
