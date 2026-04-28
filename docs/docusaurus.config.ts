@@ -68,10 +68,9 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
+          to: '/docs/Commit%20Crew/Ludarte%20Dashboard/ludarte',
           label: 'Projetos',
+          position: 'left',
         },
         {
           to: '/docs/Commit%20Crew/Ludarte%20Dashboard/ludarte',
