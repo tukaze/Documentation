@@ -215,20 +215,51 @@ code {
 }
 
 @media screen and (max-width: 996px) {
+  .navbar,
+  .navbar-sidebar--show {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
   .navbar-sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(22rem, 86vw) !important;
+    height: 100vh !important;
+    z-index: 500;
     background:
       linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(246, 243, 238, 0.96));
     border-left: 1px solid rgba(35, 49, 61, 0.08);
     box-shadow: -18px 0 40px rgba(35, 49, 61, 0.14);
+    opacity: 0;
+    visibility: hidden;
+    overflow-x: hidden;
     overflow-y: auto;
+    transform: translate3d(-100%, 0, 0) !important;
   }
 
   .navbar-sidebar__backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 499;
     background: rgba(35, 49, 61, 0.24);
     backdrop-filter: blur(4px);
   }
 
+  .navbar-sidebar--show .navbar-sidebar,
+  .navbar-sidebar--show .navbar-sidebar__backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-sidebar--show .navbar-sidebar {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
   .navbar-sidebar__brand {
+    min-height: var(--ifm-navbar-height);
     border-bottom: 1px solid rgba(35, 49, 61, 0.08);
   }
 
