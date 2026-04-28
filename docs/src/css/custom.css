@@ -215,8 +215,50 @@ code {
 }
 
 @media screen and (max-width: 996px) {
+  .navbar-sidebar {
+    background:
+      linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(246, 243, 238, 0.96));
+    border-left: 1px solid rgba(35, 49, 61, 0.08);
+    box-shadow: -18px 0 40px rgba(35, 49, 61, 0.14);
+    overflow-y: auto;
+  }
+
+  .navbar-sidebar__backdrop {
+    background: rgba(35, 49, 61, 0.24);
+    backdrop-filter: blur(4px);
+  }
+
+  .navbar-sidebar__brand {
+    border-bottom: 1px solid rgba(35, 49, 61, 0.08);
+  }
+
+  .navbar-sidebar__items {
+    padding-bottom: 1rem;
+  }
+
+  .navbar-sidebar .menu__link,
+  .navbar-sidebar .navbar__link {
+    display: block;
+    margin: 0.25rem 0;
+  }
+
   .theme-doc-markdown {
     padding: 1.25rem;
     border-radius: 22px;
   }
+}
+
+[data-theme='dark'] .navbar-sidebar {
+  background:
+    linear-gradient(180deg, rgba(15, 21, 28, 0.98), rgba(18, 26, 34, 0.96));
+  border-left-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .navbar-sidebar__backdrop {
+  background: rgba(0, 0, 0, 0.42);
+}
+
+[data-theme='dark'] .navbar-sidebar__brand {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
